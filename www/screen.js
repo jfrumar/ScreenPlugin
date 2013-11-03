@@ -1,4 +1,4 @@
-var screen = {
+var screenControl = {
     keepOn: function(bool, successCallback, errorCallback) {
         cordova.exec(
             successCallback, // success callback function
@@ -9,4 +9,4 @@ var screen = {
         ); 
     }
 }
-module.exports = screen;
+module.exports = screenControl;
