@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+           id="com.grouphead.screen"
+      version="0.1.0">
+    <name>Screen</name>
+    <description>Allows persisting the screen on</description>
+    <license>MIT</license>
+    <keywords>phonegap,screen</keywords>
+
+
+    <js-module src="www/screen.js" name="Screen">
+        <clobbers target="window.screen" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="Screen">
+                <param name="android-package" value="com.grouphead.screen.Screen"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/Screen.java" target-dir="src/com/groupahead/screen" />      
+     </platform>          
+</plugin>
