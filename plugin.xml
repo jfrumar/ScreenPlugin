@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
-           id="com.grouphead.screen"
+           id="com.groupahead.screen"
       version="0.1.0">
     <name>Screen</name>
     <description>Allows persisting the screen on</description>
@@ -17,7 +17,7 @@
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="Screen">
-                <param name="android-package" value="com.grouphead.screen.Screen"/>
+                <param name="android-package" value="com.groupahead.screen.Screen"/>
             </feature>
         </config-file>
 
