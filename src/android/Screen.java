@@ -1,4 +1,4 @@
-package org.apache.cordova.plugin;
+package com.groupahead.screen;
 
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaInterface;
