@@ -21,7 +21,10 @@
             </feature>
         </config-file>
 
-        <source-file src="src/android/Screen.java" target-dir="src/com/groupahead/screen" />      
-        <uses-permission android:name="android.permission.WAKE_LOCK"/>
+        <config-file target="AndroidManifest.xml" parent="/manifest">
+            <uses-permission android:name="android.permission.WAKE_LOCK"/>
+        </config-file>
+
+        <source-file src="src/android/Screen.java" target-dir="src/com/groupahead/screen" />
      </platform>          
 </plugin>
