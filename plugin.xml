@@ -10,7 +10,7 @@
 
 
     <js-module src="www/screen.js" name="Screen">
-        <clobbers target="screenControl" />
+        <clobbers target="window.screenControl" />
     </js-module>
 
     <!-- android -->
