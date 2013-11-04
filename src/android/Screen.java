@@ -1,5 +1,7 @@
 package com.groupahead.screen;
 
+import java.util.logging.Logger;
+
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaInterface;
 import org.apache.cordova.CordovaPlugin;
@@ -7,11 +9,9 @@ import org.apache.cordova.CordovaWebView;
 import org.json.JSONArray;
 import org.json.JSONException;
 
-import android.app.Application;
 import android.content.Context;
-import android.os.Debug;
 import android.os.PowerManager;
-import android.os.PowerManager.WakeLock;
+import android.util.Log;
 
 /**
  * Keeps the screen on
@@ -58,6 +58,7 @@ public class Screen extends CordovaPlugin {
         if (bool) {
             try {
                 mWakeLock.acquire();
+                Log.i("screen", "Screen keepalive on");
                 callbackContext.success("Screen keepalive on");
             } catch (Exception e) {
                 callbackContext.error("Screen keepalive on request failed: " + e.getMessage());
@@ -66,6 +67,7 @@ public class Screen extends CordovaPlugin {
             try {
                 if (mWakeLock.isHeld()) {
                     mWakeLock.release();
+                    Log.i("screen", "Screen keepalive off");
                     callbackContext.success("Screen keepalive off");
                 }
             } catch (Exception e) {
